@@ -1,0 +1,40 @@
+{
+  "agreement": "30502438537/001/01/INTERKYT",
+  "channel": 7,
+  "sendingNumber": "0000011079",
+  "totalRegsInf": "0000000004",
+  "totalAmountExp1": "000000718350586",
+  "totalAmountExp2": "000000000000000",
+  "codeStatus": "0000000096",
+  "status": "Default Status",
+  "dischargeDate": "13/05/2021",
+  "numberBaseRioserv": "2106020002",
+  "numberLastRendition": "0000000000",
+  "movementsProcesed": "0000000000",
+  "movementsAccepted": "0000000000",
+  "movementsRejected": "0000000000",
+  "registersValidated": "0000000000",
+  "codeResultValidation": "0    ",
+  "descriptionValidation": "                    ",
+  "idRequest": "00083575",
+  "typeFormat": "F",
+  "logQuantity": "0000000002",
+  "logStatus": [
+    {
+      "date": "02/06/2021 18:20:18",
+      "description": "Transmitida"
+    },
+    {
+      "date": "02/06/2021 18:24:12",
+      "description": "Validada"
+    },
+    {
+      "date": "02/06/2021 19:24:12",
+      "description": "Pendiente de procesamiento manual"
+    },
+    {
+      "date": "02/06/2021 19:24:12",
+      "description": "Rechazada"
+    }
+  ]
+}

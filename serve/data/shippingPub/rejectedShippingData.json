@@ -1,0 +1,54 @@
+{
+  "agreement": "30502438537/001/01",
+  "detail": {
+    "sendingNumber": "00121",
+    "lastSettlement": "0000000",
+    "batchProcessing": "Online",
+    "refreshDebt": "0"
+  },
+  "rejections": [
+    {
+      "registryId": "D",
+      "operationType": "A",
+      "currency": "1",
+      "customerNumber": "000ABC123456789",
+      "documentType": "FACTURA",
+      "documentId": "12345678901",
+      "instance": "2",
+      "customerCuit": "30700005573",
+      "errors": [
+        {
+          "errorCode": "120",
+          "description": "DEUDA ENVIADA DESACTUALIZADA"
+        },
+        {
+          "errorCode": "120",
+          "description": "DEUDA ENVIADA ERRONEA"
+        },
+        {
+          "errorCode": "120",
+          "description": "DEUDA ENVIADA DESACTUALIZADA"
+        }
+      ]
+    },
+    {
+      "registryId": "D",
+      "operationType": "A",
+      "currency": "1",
+      "customerNumber": "000000000001000",
+      "documentId": "000000000000001",
+      "instance": "2",
+      "customerCuit": "30700005573",
+      "errors": [
+        {
+          "errorCode": "120",
+          "description": "DEUDA ENVIADA DESACTUALIZADA"
+        },
+        {
+          "errorCode": "120",
+          "description": "DEUDA ENVIADA ERRONEA"
+        }
+      ]
+    }
+  ]
+}

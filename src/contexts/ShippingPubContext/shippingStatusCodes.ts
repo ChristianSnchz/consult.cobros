@@ -1,0 +1,4 @@
+const REJECTED_STATUS_CODES = ['1', '3', '4'];
+const CANCELLED_STATUS_CODE = '96'; // Anulada
+
+export { REJECTED_STATUS_CODES, CANCELLED_STATUS_CODE };

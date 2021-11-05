@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Template
+#########################################
+################ OBJECTS ################
+#########################################
+objects:
+    - apiVersion: v1
+      kind: ConfigMap
+      metadata:
+          name: pe-fe-debt-consult-config
+      data:
+          TZ: 'America/Argentina/Buenos_Aires'

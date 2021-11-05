@@ -1,0 +1,43 @@
+{
+  "agreement": {
+    "value": null,
+    "width": "312",
+    "name": "agreement",
+    "dataTestId": "agreement",
+    "placeholder": "Elegí un acuerdo *",
+    "validations": [
+      {
+        "type": "required",
+        "text": "*Este campo es requerido"
+      }
+    ],
+    "type": "dropdown",
+    "optionsList": [],
+    "defaultHidden": false
+  },
+  "date": {
+    "value": {
+      "start": null,
+      "end": null
+    },
+    "validations": [
+      {
+        "type": "required",
+        "text": "*Este campo es requerido"
+      }
+    ],
+    "name": "date",
+    "dataTestId": "date",
+    "placeholder": "Fecha alta",
+    "type": "date",
+    "defaultHidden": false
+  },
+  "shippingNumber": {
+    "value": "",
+    "name": "shippingNumber",
+    "dataTestId": "delivery-number",
+    "placeholder": "Ingresá número de envío",
+    "type": "input",
+    "defaultHidden": false
+  }
+}

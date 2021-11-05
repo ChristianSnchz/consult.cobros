@@ -1,0 +1,27 @@
+# dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# testing
+coverage/
+
+# development
+.babel-cache/
+
+# production
+dist/
+build/
+
+# static minified files
+public/static/*
+!public/static/importmap.json
+
+# misc
+.DS_Store
+
+*.log
+
+# IDEs
+.idea/
+.vscode/

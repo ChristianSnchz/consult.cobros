@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "react": "./react.development.js",
+    "react-dom": "./react-dom.development.js",
+
+    "@santander/debt-consult": "/debt-consult.bundle.js"
+  }
+}

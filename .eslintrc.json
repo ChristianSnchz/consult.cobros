@@ -1,0 +1,94 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "jest": true
+  },
+  "globals": {
+    "System": true
+  },
+  "extends": [
+    "airbnb-base",
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 11,
+    "sourceType": "module",
+    "tsconfigRootDir": "./tsconfig.json"
+  },
+  "plugins": ["import", "jsx-a11y", "prettier", "react", "react-hooks", "@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "arrow-parens": ["warn", "as-needed"],
+    "comma-dangle": ["warn", "never"],
+    "import/no-cycle": ["off"],
+    "import/no-extraneous-dependencies": ["off"],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-onchange": "off",
+    "jsx-a11y/no-static-element-interactions": 0,
+    "max-len": ["error", 120],
+    "newline-per-chained-call": "off",
+    "no-console": [
+      "warn",
+      {
+        "allow": ["tron"]
+      }
+    ],
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": ["_id"],
+        "enforceInMethodNames": true
+      }
+    ],
+    "no-use-before-define": "off",
+    "quotes": ["error", "single"],
+    "react/require-default-props": ["error"],
+    "react/prop-types": "off",
+    "@typescript-eslint/no-var-requires": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": {
+          "resolve": {
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
+          }
+        }
+      }
+    },
+    "react": {
+      "version": "detect"
+    }
+  }
+}

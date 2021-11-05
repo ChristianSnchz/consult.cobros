@@ -1,0 +1,70 @@
+{
+  "agreement": {
+    "value": null,
+    "name": "agreement",
+    "dataTestId": "agreement",
+    "placeholder": "Elegí un acuerdo *",
+    "validations": [{"type": "required", "text": "*Este campo es requerido"}],
+    "type": "dropdown",
+    "width": "312",
+    "optionsList": [],
+    "defaultHidden": false
+  },
+  "clientNumber": {
+    "value": "",
+    "name": "clientNumber",
+    "dataTestId": "nro-cliente",
+    "placeholder": "Número de cliente *",
+    "validations": [{"type": "required", "text": "*Este campo es requerido"}],
+    "type": "input",
+    "defaultHidden": false
+  },
+  "clientCuit": {
+    "value": "",
+    "name": "clientCuit",
+    "dataTestId": "cuit-cliente",
+    "placeholder": "CUIT de cliente",
+    "type": "input",
+    "defaultHidden": false,
+    "disabled": true
+  },
+  "businessName": {
+    "value": "",
+    "name": "businessName",
+    "dataTestId": "razon-social",
+    "placeholder": "Razón social",
+    "type": "input",
+    "defaultHidden": true,
+    "disabled": true
+  },
+  "documentType": {
+    "value": "",
+    "name": "documentType",
+    "dataTestId": "tipo-comprobante",
+    "optionsList": [],
+    "placeholder": "Tipo de comprobante",
+    "type": "dropdown",
+    "defaultHidden": true
+  },
+  "documentNumber": {
+    "value": "",
+    "name": "documentNumber",
+    "dataTestId": "nro-comprobante",
+    "placeholder": "Número de comprobante",
+    "validations": [{"type": "required", "text": "*Este campo es requerido"}],
+    "type": "input",
+    "defaultHidden": true,
+    "disabled": true
+  },
+  "quotaNumber": {
+    "value": "",
+    "name": "quotaNumber",
+    "dataTestId": "quota-number",
+    "placeholder": "Cuota",
+    "width": "100",
+    "validations": [{"type": "required", "text": "*Este campo es requerido"}],
+    "type": "input",
+    "defaultHidden": true,
+    "disabled": true
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "agreement":"30502438537/001/01/INTERKYT",
+  "offset":0,
+  "limit":10,
+  "total":12,
+  "channel":"7",
+  "shippingsQuantity":12,
+  "shippingsInfo":[
+    {
+      "id":"30502438537_1_1_11062_210330",
+      "shippingNumber":"11062",
+      "codeStatus":"3",
+      "status":"Rechazada",
+      "dischargeDate":"30/03/2021",
+      "totalRegsInf":"4",
+      "numberBaseRioserv":"2103300010",
+      "totalAmountExp1":"$ 7.183.505,86",
+      "totalAmountExp2":"$ 718.350.586.000,00"
+    },
+    {
+      "id":"30502438537_1_1_11062_210610",
+      "shippingNumber":"11062",
+      "codeStatus":"86",
+      "status":"Autorizada",
+      "dischargeDate":"10/06/2021",
+      "totalRegsInf":"4",
+      "numberBaseRioserv":"2106100002",
+      "totalAmountExp1":"$ 7.183.505,86",
+      "totalAmountExp2":"$ 718.350.586.000,00"
+    },
+    {
+      "id":"30502438537_1_1_11063_210408",
+      "shippingNumber":"11063",
+      "codeStatus":"90",
+      "status":"Pendiente de aprobación",
+      "dischargeDate":"08/04/2021",
+      "totalRegsInf":"4",
+      "numberBaseRioserv":"2104080001",
+      "totalAmountExp1":"$ 7.183.505,86",
+      "totalAmountExp2":"$ 718.350.586.000,00"
+    },
+    {
+      "id":"30502438537_1_1_11073_210512",
+      "shippingNumber":"11073",
+      "codeStatus":"90",
+      "status":"Pendiente de aprobación",
+      "dischargeDate":"12/05/2021",
+      "totalRegsInf":"1",
+      "numberBaseRioserv":"2105120002",
+      "totalAmountExp1":"$ 7.183.505,86",
+      "totalAmountExp2":"$ 718.350.586.000,00"
+    },
+    {
+      "id":"30502438537_1_1_11074_210513",
+      "shippingNumber":"11074",
+      "codeStatus":"90",
+      "status":"Pendiente de aprobación",
+      "dischargeDate":"13/05/2021",
+      "totalRegsInf":"2",
+      "numberBaseRioserv":"2105130001",
+      "totalAmountExp1":"$ 183.505,86",
+      "totalAmountExp2":"$ 18.350.586.000,00"
+    },
+    {
+      "id":"30502438537_1_1_11076_210601",
+      "shippingNumber":"11076",
+      "codeStatus":"95",
+      "status":"Transmitida",
+      "dischargeDate":"01/06/2021",
+      "totalRegsInf":"4",
+      "numberBaseRioserv":"2106010002",
+      "totalAmountExp1":"$ 7.183.505,86",
+      "totalAmountExp2":"$ 718.350.586.000,00"
+    },
+    {
+      "id":"30502438537_1_1_11076_210513",
+      "shippingNumber":"11076",
+      "codeStatus":"95",
+      "status":"Transmitida",
+      "dischargeDate":"13/05/2021",
+      "totalRegsInf":"4",
+      "numberBaseRioserv":"2105130003",
+      "totalAmountExp1":"$ 3.505,86",
+      "totalAmountExp2":"$ 350.586.000,00"
+    },
+    {
+      "id":"30502438537_1_1_11077_210601",
+      "shippingNumber":"11077",
+      "codeStatus":"95",
+      "status":"Transmitida",
+      "dischargeDate":"01/06/2021",
+      "totalRegsInf":"4",
+      "numberBaseRioserv":"2106010003",
+      "totalAmountExp1":"$ 7.183.505,86",
+      "totalAmountExp2":"$ 718.350.586.000,00"
+    },
+    {
+      "id":"30502438537_1_1_11078_210601",
+      "shippingNumber":"11078",
+      "codeStatus":"96",
+      "status":"Anulada",
+      "dischargeDate":"01/06/2021",
+      "totalRegsInf":"4",
+      "numberBaseRioserv":"2106010004",
+      "totalAmountExp1":"$ 7.183.505,86",
+      "totalAmountExp2":"$ 718.350.586.000,00"
+    },
+    {
+      "id":"30502438537_1_1_11078_210513",
+      "shippingNumber":"11078",
+      "codeStatus":"96",
+      "status":"Anulada",
+      "dischargeDate":"13/05/2021",
+      "totalRegsInf":"6",
+      "numberBaseRioserv":"2105130005",
+      "totalAmountExp1":"$ 5,86",
+      "totalAmountExp2":"$ 586.000,00"
+    },
+    {
+      "id":"30502438537_1_1_11078_210513",
+      "shippingNumber":"11078",
+      "codeStatus":"96",
+      "status":"Anulada",
+      "dischargeDate":"13/05/2021",
+      "totalRegsInf":"6",
+      "numberBaseRioserv":"2105130005",
+      "totalAmountExp1":"$ 5,86",
+      "totalAmountExp2":"$ 586.000,00"
+    },
+    {
+      "id":"30502438537_1_1_11077_210601",
+      "shippingNumber":"11077",
+      "codeStatus":"95",
+      "status":"Transmitida",
+      "dischargeDate":"01/06/2021",
+      "totalRegsInf":"4",
+      "numberBaseRioserv":"2106010003",
+      "totalAmountExp1":"$ 7.183.505,86",
+      "totalAmountExp2":"$ 718.350.586.000,00"
+    }
+  ]
+}

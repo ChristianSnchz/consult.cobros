@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "short_name": "React debt-consult micro-front",
+  "name": "React debt-consult micro-front",
+  "description": "Micro-front for debt records section.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "144x144",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "version": "1.0.0",
+  "default_locale": "es"
+}

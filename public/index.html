@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#000000" />    
+    <meta name="importmap-type" content="systemjs-importmap" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="manifest" href="manifest.json" type="application/manifest+json" />
+    <link rel="stylesheet" href="/styles.css" type="text/css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Consulta de Deudas</title>
+    <script type="systemjs-importmap" src="/static/importmap.json"></script>
+    <script src="/static/single-spa.dev.js"></script>
+    <script src="/static/deps.bundle.js"></script>
+  </head>
+  <body>
+    <script>
+      singleSpa.registerApplication(
+        '@santander/debt-consult',
+        function () {
+          return System.import('@santander/debt-consult');
+        },
+        function () {
+          return true;
+        }
+      );
+      singleSpa.start();
+    </script>
+  </body>
+</html>

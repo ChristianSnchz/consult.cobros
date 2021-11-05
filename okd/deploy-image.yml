@@ -1,0 +1,160 @@
+apiVersion: v1
+kind: Template
+parameters:
+- name: APPLICATION_NAME
+  displayName: Application Name
+  description: The name for the application.
+- name: APPLICATION_LABEL
+  displayName: Application Label
+  description: The label for the application common between other resources.
+- name: CONTEXT_DIR
+  description: Path within Git project to build; empty for root project directory.
+  displayName: Context Directory
+- name: GATEWAY_PUBLIC_KEY
+  displayName: Gateway public key
+  description: Gateway public key secret name.
+- name: BASE_PATH
+  displayName: Base path
+  description: Base path for the server
+- name: READINESS_PROBE_PATH
+  displayName: Readiness Probe
+  description: Readiness Health Probe, include the base path of the server if necesary.
+- name: LIVENESS_PROBE_PATH
+  displayName: Liveness Health Probe
+  description: Liveness Health Probe, include the base path of the server if necesary.
+- name: DOCKER_APP_REGISTRY
+  displayName: Docker Registry
+  description: Gitlab Docker Registry
+- name: DOCKER_APP_TAG
+  displayName: Docker Application Tag
+  description: Docker Application Tag
+- name: IMAGE_NAME
+  displayName: Docker Image Name
+  description: Docker Image Name
+- name: BFF_URL
+  displayName: Url Route OKD Bff
+  description: Url Route OKD Bff
+## FOR OCP DEPLOYMENT
+- name: ENVIRONMENT
+  displayName: Environment
+  description: Environment
+- name: PROGRAM_ID
+  displayName: Program ID
+  description: Program ID
+- name: REPLICAS
+  displayName: Replicas
+  description: Replicas
+- name: CMDB
+- name: CPU_LIMIT
+- name: RAM_LIMIT
+
+#########################################
+################ OBJECTS ################
+#########################################
+objects:
+#########################################
+########### DEPLOYMENT CONFIG ###########
+#########################################
+- kind: DeploymentConfig
+  apiVersion: v1
+  metadata:
+    labels:
+      app: ${APPLICATION_NAME}
+      env: ${ENVIRONMENT}
+      programid: ${PROGRAM_ID}
+      deploymentConfig: ${APPLICATION_NAME}
+    name: ${APPLICATION_NAME}
+  spec:
+    strategy:
+      type: Rolling
+    replicas: ${{REPLICAS}}
+    selector:
+      deploymentConfig: ${APPLICATION_NAME}
+      app: ${APPLICATION_NAME}
+    template:
+      metadata:
+        name: ${APPLICATION_NAME}
+        labels:
+          app: ${APPLICATION_NAME}
+          env: ${ENVIRONMENT}
+          programid: ${PROGRAM_ID}
+          deploymentConfig: ${APPLICATION_NAME}
+          cmdb: ${CMDB}
+        annotations:
+          alpha.image.policy.openshift.io/resolve-names: '*'
+      spec:
+        terminationGracePeriodSeconds: 75
+        containers:
+          - name: ${APPLICATION_NAME}
+            image: ${APPLICATION_NAME}:default
+            imagePullPolicy: Always
+            envFrom:
+            - configMapRef:
+                name: pe-fe-debt-consult-config
+            ports:
+              - containerPort: 8080
+                protocol: TCP
+            readinessProbe:
+              tcpSocket:
+                port: 8080
+              initialDelaySeconds: 120
+            livenessProbe:
+              httpGet:
+                path: /health
+                port: 8080
+              initialDelaySeconds: 120
+            terminationMessagePath: /dev/termination-log
+            terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+
+#########################################
+################ SERVICE ################
+#########################################
+- kind: Service
+  apiVersion: v1
+  metadata:
+    labels:
+      app: ${APPLICATION_NAME}
+      env: ${ENVIRONMENT}
+      programid: ${PROGRAM_ID}
+      deploymentConfig: ${APPLICATION_NAME}
+      cmdb: ${CMDB}
+    name: ${APPLICATION_LABEL}
+  spec:
+    ports:
+    - name: 80-tcp
+      port: 80
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      app: ${APPLICATION_NAME}
+      deploymentConfig: ${APPLICATION_NAME}
+    sessionAffinity: None
+    type: ClusterIP
+
+#########################################
+############### ROUTE ###################
+#########################################
+- kind: Route
+  apiVersion: route.openshift.io/v1
+  metadata:
+    annotations:
+      haproxy.router.openshift.io/timeout: 60000ms
+    labels:
+      app: ${APPLICATION_NAME}
+      env: ${ENVIRONMENT}
+      programid: ${PROGRAM_ID}
+      deploymentConfig: ${APPLICATION_NAME}
+      cmdb: ${CMDB}
+    name:  ${APPLICATION_NAME}
+  spec:
+    tls:
+      termination: edge
+      insecureEdgeTerminationPolicy: Redirect
+    port:
+      targetPort: 80-tcp
+    to:
+      kind: Service
+      name: ${APPLICATION_LABEL}
+    wildcardPolicy: None

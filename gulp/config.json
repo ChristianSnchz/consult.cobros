@@ -1,0 +1,43 @@
+{
+  "clean": {
+    "dist": ["dist/"],
+    "displayName": "clean old build, delete 'dist' folder"
+  },
+  "eslintSrc": {
+    "src": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
+    "dest": "src",
+    "displayName": "run eslint in 'src' folder"
+  },
+  "eslintTest": {
+    "src": ["test/**/*.js", "test/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
+    "dest": "test",
+    "displayName": "run eslint in 'test' folders"
+  },
+  "postinstall": {
+    "copyStaticDevFiles": {
+      "src": [
+        "node_modules/react/umd/react.development.js",
+        "node_modules/react-dom/umd/react-dom.development.js",
+        "node_modules/single-spa/lib/umd/single-spa.dev.js"
+      ],
+      "dest": "public/static/",
+      "displayName": "copy development static files to 'public/static' folder"
+    },
+    "webpack": {
+      "src": "webpack.config.dev.deps.js",
+      "dest": "public/static/",
+      "displayName": "compile development dependencies"
+    }
+  },
+  "stylelint": {
+    "src": "src/styles/**/*.scss",
+    "displayName": "run stylelint in 'styles' folder"
+  },
+  "webpack": {
+    "dist": {
+      "src": "webpack.config.build.js",
+      "dest": "dist/",
+      "displayName": "webpack bundle"
+    }
+  }
+}

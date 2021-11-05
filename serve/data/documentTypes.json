@@ -1,0 +1,50 @@
+[
+  {
+    "value": "AD",
+    "label": "ANTICIPO DE DEBIN"
+  },
+  {
+    "value": "AP",
+    "label": "ANTICIPO DE PAGO"
+  },
+  {
+    "value": "BL",
+    "label": "BOLETA"
+  },
+  {
+    "value": "CD",
+    "label": "CDP DOLAR"
+  },
+  {
+    "value": "CP",
+    "label": "CDP PESOS"
+  },
+  {
+    "value": "CV",
+    "label": "ANTICIPO DE CVU"
+  },
+  {
+    "value": "FC",
+    "label": "FACTURA"
+  },
+  {
+    "value": "NC",
+    "label": "NOTA DE CREDITO"
+  },
+  {
+    "value": "OP",
+    "label": "ORDEN DE PAGO"
+  },
+  {
+    "value": "PO",
+    "label": "POLIZA"
+  },
+  {
+    "value": "XC",
+    "label": "CREDITO POR AJUSTE AL PAGO"
+  },
+  {
+    "value": "XD",
+    "label": "DEBITO POR AJUSTE AL PAGO"
+  }
+]

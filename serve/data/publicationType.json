@@ -1,0 +1,10 @@
+[
+  {
+    "value": "FE",
+    "label": "Factura Electronica"
+  },
+  {
+    "value": "SF",
+    "label": "Sin factura electronica"
+  }
+]

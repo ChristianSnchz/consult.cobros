@@ -1,0 +1,12 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "max-nesting-depth": null,
+    "selector-max-compound-selectors": null,
+    "selector-max-id": null,
+    "selector-no-qualifying-type": null
+  }
+}
